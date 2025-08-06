@@ -1,13 +1,159 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00A86B 0%, #00D4AA 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00995a 0%, #00c495 100%);
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #2a2a2a;
+  }
+}
+
+/* Focus styles for better accessibility */
+*:focus {
+  outline: 2px solid #00A86B;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Loading animation for images */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Custom selection color */
+::selection {
+  background: rgba(0, 168, 107, 0.3);
+  color: inherit;
+}
+
+::-moz-selection {
+  background: rgba(0, 168, 107, 0.3);
+  color: inherit;
+}
+
+/* Remove default button styles */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Improve link accessibility */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Custom focus ring for Material-UI components */
+.MuiButton-root:focus,
+.MuiTextField-root:focus,
+.MuiSelect-root:focus {
+  outline: none;
+}
+
+.MuiButton-root:focus-visible,
+.MuiTextField-root:focus-visible,
+.MuiSelect-root:focus-visible {
+  outline: 2px solid #00A86B;
+  outline-offset: 2px;
+}
+
+/* Animation for cards on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card-animation {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects for interactive elements */
+.interactive-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interactive-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #00A86B 0%, #00D4AA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
 }
