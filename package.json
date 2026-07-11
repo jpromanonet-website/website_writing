@@ -1,5 +1,6 @@
 {
   "name": "website_writing",
+  "homepage": "https://jpromano.net/writing/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
