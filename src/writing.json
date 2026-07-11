@@ -1,5 +1,11 @@
 [ 
   {
+    "title": "DESARROLLA TU LECTOR DE PDFs CON PYTHON",
+    "imageSrc": "./assets/ru.png",
+    "url": "https://www.redusers.com/noticias/publicaciones/lector-de-pdfs/",
+    "category": "Red USERS"
+  },
+  {
     "title": "How to Create a Basic CI/CD Pipeline with Webhooks on Linux",
     "imageSrc": "./assets/fcc.png",
     "url": "https://www.freecodecamp.org/news/create-a-basic-cicd-pipeline-with-webhooks-on-linux/",
